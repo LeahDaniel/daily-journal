@@ -1,0 +1,25 @@
+/* .entryForm { 
+    display: flex;
+    flex-direction: column;
+} */
+
+.entryForm__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.entryForm__field_date {
+    width: 30%;
+}
+
+.entryForm__field_text {
+    width: 30%;
+}
+
+.entryForm__field_textArea {
+    width: 30%;
+}
+
+.entryForm__field_select {
+    width: 30%;
+}
