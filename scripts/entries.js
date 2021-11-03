@@ -1,9 +1,11 @@
-/*
-    Which function allows this component to get a copy
-    of the data? Import it on the following line of code
-    and then invoke it on the third line of code.
-*/
-import { getJournalEntries } from "./database.js"
+import { deleteEntry, getJournalEntries } from "./database.js"
+
+document.addEventListener("click", click => {
+    if (click.target.id.startsWith("delete--")) {
+        const [,entryId] = click.target.id.split("--")
+        deleteEntry(parseInt(entryId))
+    }
+})
 
 /* Iterates through each object in the entries array (from the getJournalEntries function) 
 and adds a string literal to a returned string.*/
@@ -15,10 +17,11 @@ export const Entries = () => {
 
     for (const entry of entries) {
         allEntriesAsHTML += `
-           <h2>${entry.concept}</h2>
-           <h4>${entry.date}</h4>
-           <p>${entry.entry}</p>
-           <p>My mood today: ${entry.mood}</p>
+            <h2>${entry.concept}</h2>
+            <h4>${entry.date}</h4>
+            <p>${entry.entry}</p>
+            <p>My mood today: ${entry.mood.label}</p>
+            <button id="delete--${entry.id}">Delete</button>
         `
     }
 

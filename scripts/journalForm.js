@@ -1,4 +1,27 @@
+import { postEntries, getMoods } from "./database.js"
+
+
+document.addEventListener("click", click => {
+    if (click.target.id === "recordButton"){
+        const date = document.querySelector("input[name='entryDate']").value
+        const formattedDate= new Date(date).toLocaleDateString('en-US', {timeZone: 'UTC'})
+        const concept = document.querySelector("input[name='conceptsCovered']").value
+        const entry = document.querySelector("textarea[name='journalEntry']").value
+        const mood = document.querySelector("select[name='moodSelector']").value
+
+        const newJournalEntry = {
+            date: formattedDate,
+            concept: concept,
+            entry: entry,
+            moodId: parseInt(mood)
+        }
+
+        postEntries(newJournalEntry)
+    }
+})
+
 export const journalForm = () => {
+    const allMoods = getMoods()
     let journalString = `
 
     <fieldset class="entryForm__field">
@@ -19,15 +42,17 @@ export const journalForm = () => {
     <fieldset class="entryForm__field">
         <label for="moodSelector">Mood for the Day</label>
         <select name="moodSelector" class="entryForm__field_select">
-            <option value="Flustered">Flustered</option>
-            <option value="Confident">Confident</option>
-            <option value="Excited">Excited</option>
-            <option value="Discouraged">Discouraged</option>
-            <option value="Confused">Confused</option>
+        ${
+            allMoods.map(
+                (mood) => {
+                    return `<option value="${ mood.id }">${ mood.label }</option>`
+                }
+            ).join("")
+        }        
         </select>
     </fieldset>
     
-    <button>Record Journal Entry</button>`
+    <button id="recordButton">Record Journal Entry</button>`
 
     return journalString
 

@@ -1,32 +1,54 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "09/27/2021",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Excited"
-        },
-        {
-            "id": 2,
-            "date": "09/28/2021",
-            "concept": "Git & Github",
-            "entry": "We talked about using Git and Github to upload your projects to the cloud and maintain edits.",
-            "mood": "Confident"
-        },
-        {
-            "id": 3,
-            "date": "09/30/2021",
-            "concept":"Javascript",
-            "entry": "We talked about terminology, functions, and scope.",
-            "mood": "Flustered"
-        },
-        {
-            "id": 4,
-            "date": "10/02/2021",
-            "concept": "Debugging",
-            "entry": "We talked about using the debugger in Dev Tools to find issues in your code and correct them.",
-            "mood": "Confused"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "09/27/2021",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "moodId": 1
+    },
+    {
+      "id": 2,
+      "date": "09/28/2021",
+      "concept": "Git & Github",
+      "entry": "We talked about using Git and Github to upload your projects to the cloud and maintain edits.",
+      "moodId": 2
+    },
+    {
+      "id": 3,
+      "date": "09/30/2021",
+      "concept": "Javascript",
+      "entry": "We talked about terminology, functions, and scope.",
+      "moodId": 3
+    },
+    {
+      "id": 4,
+      "date": "10/02/2021",
+      "concept": "Debugging",
+      "entry": "We talked about using the debugger in Dev Tools to find issues in your code and correct them.",
+      "moodId": 4
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Excited"
+    },
+    {
+      "id": 2,
+      "label": "Confident"
+    },
+    {
+      "id": 3,
+      "label": "Flustered"
+    },
+    {
+      "id": 4,
+      "label": "Confused"
+    },
+    {
+      "id": 5,
+      "label": "Discouraged"
+    }
+  ]
 }
