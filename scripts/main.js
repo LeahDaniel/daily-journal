@@ -1,12 +1,13 @@
 import { DailyJournal } from "./DailyJournal.js"
-import { retrieveData } from "./database.js"
+import { retrieveData } from "./dataAccess.js"
 
 const container = document.querySelector("#container")
 
 
 /* Moves final HTML string into the container id (the main) */
 const render = () => {
-    retrieveData().then(
+    retrieveData()
+    .then(
         () => {
             container.innerHTML = DailyJournal()
         }

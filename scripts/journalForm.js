@@ -1,10 +1,11 @@
-import { postEntries, getMoods } from "./database.js"
+import { postEntries, getMoods } from "./dataAccess.js"
 
 
 document.addEventListener("click", click => {
-    if (click.target.id === "recordButton"){
+    if (click.target.id === "recordButton") {
+        click.preventDefault()
         const date = document.querySelector("input[name='entryDate']").value
-        const formattedDate= new Date(date).toLocaleDateString('en-US', {timeZone: 'UTC'})
+        const formattedDate = new Date(date).toLocaleDateString('en-US', { timeZone: 'UTC' })
         const concept = document.querySelector("input[name='conceptsCovered']").value
         const entry = document.querySelector("textarea[name='journalEntry']").value
         const mood = document.querySelector("select[name='moodSelector']").value
@@ -19,6 +20,14 @@ document.addEventListener("click", click => {
         postEntries(newJournalEntry)
     }
 })
+
+export const enteredTagArray = () => {
+    const tagString = document.querySelector("input[name='tags']")
+    if(tagString){
+        return tagString.value.split(",")
+    }
+}
+
 
 export const journalForm = () => {
     const allMoods = getMoods()
@@ -40,14 +49,18 @@ export const journalForm = () => {
     </fieldset>
 
     <fieldset class="entryForm__field">
+        <label for="tags">Tags</label>
+        <input name="tags" class="entryForm__field_text" >
+    </fieldset>
+
+    <fieldset class="entryForm__field">
         <label for="moodSelector">Mood for the Day</label>
         <select name="moodSelector" class="entryForm__field_select">
-        ${
-            allMoods.map(
-                (mood) => {
-                    return `<option value="${ mood.id }">${ mood.label }</option>`
-                }
-            ).join("")
+        ${allMoods.map(
+        (mood) => {
+            return `<option value="${mood.id}">${mood.label}</option>`
+        }
+    ).join("")
         }        
         </select>
     </fieldset>
