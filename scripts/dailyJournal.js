@@ -2,7 +2,7 @@ import { Entries } from "./Entries.js"
 import { journalForm } from "./journalForm.js";
 import { MoodFilter } from "./MoodFilter.js";
 
-/* Takes the HTML string given by the Entries function and adds opening and closing tags to it.*/
+/* HTML for main container, interpolated with journalForm, moodfilter, and etnries functions*/
 
 export const DailyJournal = () => {
     return `

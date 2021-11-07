@@ -1,25 +1,53 @@
-/* .entryForm { 
-    display: flex;
-    flex-direction: column;
-} */
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+@import url(./form.css);
+@import url(./filter.css);
+@import url(./entries.css);
 
-.entryForm__field {
-    display: flex;
-    flex-direction: column;
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
 }
 
-.entryForm__field_date {
-    width: 30%;
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Patua One", serif;
+	letter-spacing: 2px;
+    margin: 0;
+    padding: 5px;
 }
 
-.entryForm__field_text {
-    width: 30%;
+/* Margins 
+----------------------------------------------------------------*/
+
+
+
+body {
+    background-color: rgb(249, 246, 243);
+    margin: 0;
+    padding: 0;
 }
 
-.entryForm__field_textArea {
-    width: 30%;
+main{
+    margin: 2rem;
 }
 
-.entryForm__field_select {
-    width: 30%;
+header {
+    background-color: rgb(247, 233, 219);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(235, 208, 186);
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
 }

@@ -1,0 +1,30 @@
+.entry {
+    background-color: rgb(247, 233, 219);
+    margin: 2rem 0;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 15%;
+}
+
+.tag {
+    margin-top: 15px;
+    /* border: rgb(215, 161, 81) 1px solid; */
+    background-color: rgb(235, 208, 186);
+    padding: 5px;
+    margin: 5px 10px 10px 0;
+    filter: drop-shadow(1px 2px 1px rgb(116, 81, 29));
+}
+
+.entry button {
+    margin-top: 15px;
+    border: rgb(215, 161, 81) 1px solid;
+    background-color: rgb(249, 246, 243);
+    border-radius: 10px;
+    padding: 7px;
+    filter: drop-shadow(1px 1px 1px rgb(140, 103, 46));
+}

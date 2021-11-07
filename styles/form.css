@@ -1,0 +1,44 @@
+.entryForm__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    border: none;
+    min-inline-size: min-content;
+    margin: 10px 0; 
+}
+
+#recordButton {
+    margin-top: 15px;
+    border: rgb(215, 161, 81) 1px solid;
+    background-color: rgb(249, 246, 243);
+    border-radius: 10px;
+    padding: 7px;
+    filter: drop-shadow(1px 1px 1px rgb(140, 103, 46));
+}
+
+.entryForm {
+    background-color: rgb(235, 208, 186);
+    padding: 20px
+}
+
+.entryForm__field_date {
+    padding: 5px 0 5px 5px;
+}
+
+.entryForm__field_text {
+    padding: 5px 0 5px 5px;
+}
+
+.entryForm__field_textArea {
+    padding: 5px 0 5px 5px;
+}
+
+.entryForm__field_select {
+    padding: 5px 0 5px 5px;
+}

@@ -27,13 +27,6 @@
       "concept": "Debugging",
       "entry": "We talked about using the debugger in Dev Tools to find issues in your code and correct them.",
       "moodId": 4
-    },
-    {
-      "date": "11/26/2021",
-      "concept": "API, JSON, Magic",
-      "entry": "test",
-      "moodId": 1,
-      "id": 5
     }
   ],
   "moods": [
@@ -61,35 +54,50 @@
   "tags": [
     {
       "id": 1,
-      "subject": "API"
+      "subject": "HTML"
     },
     {
       "id": 2,
-      "subject": "components"
+      "subject": "CSS"
     },
     {
       "id": 3,
-      "subject": "fetch"
+      "subject": "Git"
     },
     {
-      "subject": "JSON",
+      "subject": "Github",
       "id": 4
     },
     {
-      "subject": "Magic",
+      "subject": "Javascript",
       "id": 5
     }
   ],
   "entrytags": [
     {
-      "entryId": 5,
-      "tagId": 1,
-      "id": 1
+      "id": 1,
+      "entryId": 1,
+      "tagId": 1
     },
     {
-      "entryId": 5,
-      "tagId": 4,
-      "id": 2
+      "id": 2,
+      "entryId": 1,
+      "tagId": 2
+    },
+    {
+      "id": 3,
+      "entryId": 2,
+      "tagId": 3
+    },
+    {
+      "id": 4,
+      "entryId": 2,
+      "tagId": 4
+    },
+    {
+      "id": 5,
+      "entryId": 3,
+      "tagId": 5
     }
   ]
 }

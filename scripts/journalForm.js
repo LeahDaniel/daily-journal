@@ -1,6 +1,7 @@
 import { postEntries, getMoods } from "./dataAccess.js"
 
-
+//when "Record Journal Entry" is clicked, capture value of all entered form fields (except for checkboxes)
+// and post a new journal entry object
 document.addEventListener("click", click => {
     if (click.target.id === "recordButton") {
         click.preventDefault()
@@ -21,6 +22,7 @@ document.addEventListener("click", click => {
     }
 })
 
+//create array of entered tag strings for use in other modules
 export const enteredTagArray = () => {
     const tagString = document.querySelector("input[name='tags']")
     if(tagString){
@@ -28,7 +30,7 @@ export const enteredTagArray = () => {
     }
 }
 
-
+//HTML for form
 export const journalForm = () => {
     const allMoods = getMoods()
     let journalString = `
