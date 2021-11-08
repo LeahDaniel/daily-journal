@@ -11,33 +11,35 @@ const findTag = (subject) => {
 //then creates an EntryTag with the tagId and entryId.
 export const createTagandEntryTag = (entry) => {
     const promiseArray = []
-    enteredTagArray().forEach(tag => {
-        findTag(tag)  // tag variable will have a string value
-            .then(matches => {  // `matches` variable value will be array of matching objects
-                let matchingTag = null
+    if (enteredTagArray()[0] !== "") {
+        enteredTagArray().forEach(tag => {
+            findTag(tag)  // tag variable will have a string value
+                .then(matches => {  // `matches` variable value will be array of matching objects
+                    let matchingTag = null
 
 
-                if (matches.length > 0) {
-                    matchingTag = matches[0].id
-                }
+                    if (matches.length > 0) {
+                        matchingTag = matches[0].id
+                    }
 
-                if (matchingTag === null) {
-                    // Tag doesn't exist. Create it then assign it to entry.
-                    promiseArray.push(
-                        postTag(tag)
-                            .then(new_tag => {
-                                postEntryTag(entry.id, new_tag.id)
-                            })
-                    )
-                }
-                else {
-                    // Tag does exist. Assign it to entry.
-                    promiseArray.push(
-                        postEntryTag(entry.id, matchingTag)
-                    )
-                }
-            })
-    })
+                    if (matchingTag === null) {
+                        // Tag doesn't exist. Create it then assign it to entry.
+                        promiseArray.push(
+                            postTag(tag)
+                                .then(new_tag => {
+                                    postEntryTag(entry.id, new_tag.id)
+                                })
+                        )
+                    }
+                    else {
+                        // Tag does exist. Assign it to entry.
+                        promiseArray.push(
+                            postEntryTag(entry.id, matchingTag)
+                        )
+                    }
+                })
+        })
+    }
     // This is where all the fetches (Promises) all run and resolve
     Promise.all(promiseArray)
         .then(

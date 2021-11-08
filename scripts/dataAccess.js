@@ -8,6 +8,7 @@ const database = {
     moods: [],
     tags: [],
     entryTags: [],
+    instructors: [],
     chosenMoodId: 0
 }
 
@@ -29,6 +30,9 @@ export const getTags = () => {
 }
 export const getEntryTags = () => {
     return database.entryTags.map(entryTag => ({ ...entryTag }))
+}
+export const getInstructors = () => {
+    return database.instructors.map(instructor => ({ ...instructor }))
 }
 export const getTransient = () => {
     return {...database.chosenMoodId}
@@ -61,6 +65,13 @@ export const retrieveMoods = () => {
         .then(response => response.json())
         .then(fetchedMoods => {
             database.moods = fetchedMoods
+        })
+}
+export const retrieveInstructors = () => {
+    return fetch("http://localhost:8088/instructors") // Fetch from the API
+        .then(response => response.json())
+        .then(fetchedInstructors => {
+            database.instructors = fetchedInstructors
         })
 }
 

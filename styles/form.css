@@ -24,6 +24,7 @@
 
 .entryForm {
     background-color: rgb(235, 208, 186);
+    border: rgb(215, 161, 81) 1px solid;
     padding: 20px
 }
 

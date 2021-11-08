@@ -27,6 +27,22 @@
       "concept": "Debugging",
       "entry": "We talked about using the debugger in Dev Tools to find issues in your code and correct them.",
       "moodId": 4
+    },
+    {
+      "date": "11/19/2021",
+      "concept": "API, JSON, Magic",
+      "entry": "test",
+      "moodId": 3,
+      "instructorId": 2,
+      "id": 5
+    },
+    {
+      "date": "11/13/2021",
+      "concept": "test no tags",
+      "entry": "test",
+      "moodId": 3,
+      "instructorId": 2,
+      "id": 6
     }
   ],
   "moods": [
@@ -71,6 +87,22 @@
     {
       "subject": "Javascript",
       "id": 5
+    },
+    {
+      "subject": "API",
+      "id": 6
+    },
+    {
+      "subject": "JSON",
+      "id": 7
+    },
+    {
+      "subject": "Magic",
+      "id": 8
+    },
+    {
+      "subject": "Intrigue",
+      "id": 9
     }
   ],
   "entrytags": [
@@ -98,6 +130,35 @@
       "id": 5,
       "entryId": 3,
       "tagId": 5
+    },
+    {
+      "entryId": 5,
+      "tagId": 7,
+      "id": 6
+    },
+    {
+      "entryId": 5,
+      "tagId": 6,
+      "id": 7
+    },
+    {
+      "entryId": 5,
+      "tagId": 8,
+      "id": 8
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Steve Brownlee"
+    },
+    {
+      "id": 2,
+      "name": "Monica Kay Provence"
+    },
+    {
+      "id": 3,
+      "name": "Taryn Lytle"
     }
   ]
 }
